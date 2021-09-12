@@ -21,14 +21,17 @@ function! micropack#init(packdir, plugins)
     let clonedir = join([s:packdir, basename], '/')
 
     if empty(glob(clonedir))
-      echom 'micropack: Installing' plugin
-      echom ''
+      echom 'micropack: Installing' basename
       call system(join([
        \ 'git clone --quiet',
        \ plugin,
        \ clonedir,
        \], ' '))
-      let shouldrestart = 1
+      if v:shell_error
+        echom 'micropack: Error while cloning' plugin
+      else
+        let shouldrestart = 1
+      endif
     endif
   endfor
 
