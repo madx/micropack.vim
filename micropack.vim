@@ -14,7 +14,7 @@ function! micropack#init(packdir, plugins)
   let s:plugins = a:plugins
   let shouldrestart = 0
 
-  silent execute '!mkdir -p ' . s:packdir
+  call system('mkdir -p ' . s:packdir)
 
   for plugin in s:plugins
     let basename = fnamemodify(plugin, ':t')
