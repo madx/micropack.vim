@@ -13,7 +13,7 @@ It makes a couple assumptions:
 Here's what you get with Micropack:
 
 * Automatic installation of missing plugins on startup
-* A `MicropackUpdate` command that pulls changes and removes unused plugins
+* A command to pull changes and remove unused plugins
 * Configuration with a single function call in your `.vimrc`
 
 ## Install
