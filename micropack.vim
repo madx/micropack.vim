@@ -24,11 +24,10 @@ function! micropack#init(packdir, plugins)
       echom 'micropack: Installing' plugin
       echom ''
       call system(join([
-       \ 'git clone --quiet https://github.com/',
+       \ 'git clone --quiet',
        \ plugin,
-       \ ' ',
        \ clonedir,
-       \], ''))
+       \], ' '))
       let shouldrestart = 1
     endif
   endfor
