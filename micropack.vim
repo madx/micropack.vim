@@ -1,4 +1,4 @@
-" Dumb af plugin management using native Vim packages
+" Dumb AF plugin management using native Vim packages
 " Only supports git repositories
 
 if exists("g:loaded_micropack")
