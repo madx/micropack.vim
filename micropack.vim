@@ -45,7 +45,7 @@ endfunction
 
 function! micropack#update()
   let installed = split(globpath(s:packdir, '*'), '\n')
-  let pluginBasenames = mapnew(s:plugins, "fnamemodify(v:val, ':t')")
+  let pluginBasenames = map(copy(s:plugins), "fnamemodify(v:val, ':t')")
 
   let updated = 0
   for plugin in installed
